@@ -1,4 +1,4 @@
-package com.example.Weather.model;
+package com.example.Weather.entity;
 
 
 import jakarta.persistence.Column;
@@ -18,7 +18,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RequestLog {
+public class RequestLogEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

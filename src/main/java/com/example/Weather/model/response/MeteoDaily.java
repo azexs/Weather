@@ -1,5 +1,6 @@
-package com.example.Weather.model;
+package com.example.Weather.model.response;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -9,5 +10,6 @@ public class MeteoDaily {
     private ArrayList<String> time;
     private ArrayList<String> sunrise;
     private ArrayList<String> sunset;
-    private ArrayList<Double> rain_sum;
+    @JsonProperty("rain_sum")
+    private ArrayList<Double> rainSum;
 }

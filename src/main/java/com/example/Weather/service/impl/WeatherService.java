@@ -2,8 +2,8 @@ package com.example.Weather.service.impl;
 
 
 import com.example.Weather.service.IWeatherService;
-import com.example.Weather.model.MeteoResponse;
-import com.example.Weather.model.RequestLog;
+import com.example.Weather.model.response.MeteoResponse;
+import com.example.Weather.entity.RequestLogEntity;
 import com.example.Weather.repository.RequestLogRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -38,13 +38,12 @@ public class WeatherService implements IWeatherService {
 
     @Override
     public void saveRequestParameters(Double longitude, Double latitude){
-         requestLogRepository.save(RequestLog.builder()
+         requestLogRepository.save(RequestLogEntity.builder()
                  .logitude(longitude)
                  .latitude(latitude)
                  .created(new Date())
                  .build());
 
     }
-
 
 }

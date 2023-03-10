@@ -1,6 +1,6 @@
 package com.example.Weather.service;
 
-import com.example.Weather.model.MeteoResponse;
+import com.example.Weather.model.response.MeteoResponse;
 
 public interface IWeatherService {
 
